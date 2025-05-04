@@ -1,7 +1,6 @@
 import json
 
-# this function reads the phrases from the file
-# and returns them as a dictionary
+# this function reads the phrases from the file and returns them as a dictionary
 
 def readPhrases():
     # open the file called phrases.json

@@ -51,8 +51,6 @@ clear_screen()
 
 print(f"DEDUG: Rooms: {rooms} Enemies: {enemies}")
 
-
-
 # create a list of actions the player can input
 actions = ["move", "attack", "defend", "help", "quit"]
 
@@ -63,17 +61,15 @@ for room in rooms:
 # set the player location to the first room
 player_location = 1
 
-
 # print the player location
 print(f"You are currently in {rooms[player_location-1]['description']}")
-
 
 #show the player these moves. Action is a list of possible moves
 print("You can do the following actions: ")
 for action in actions:
     print(action)
-# set the current user input state to false
 
+# set the current user input state to false
 user_input = False
 
 # while the user input is not in the list of actions, keep asking for input
@@ -90,13 +86,11 @@ while not user_input:
         user_input = "help"
     elif user_input == "q":
         user_input = "quit"
+
     # if the user input is not in the list of actions, print an error message and set the user input to false
-    
-    
     if user_input not in actions:
         print(f"Sorry, I can't {user_input} here, try something else")
         user_input = False
     else:
         print(f"You chose: {user_input}")
         break
-#
